@@ -185,6 +185,7 @@ section {
     overflow-y: visible;
     margin-left: auto;
     margin-right: auto;
+    overflow-y: hidden;
 }
 
 .uvod_landscape {
@@ -201,13 +202,13 @@ section {
     }
 
     #uvod .row {
-        height: 20vh;
+        height: calc((100vh - clamp(2rem, calc(6vw + 0.2rem), 8rem)) / 4.5);
         width: 80vw;
     }
 
     #uvod .row p {
-        font-size: 3.5vw;
-        line-height: 3.5vw;
+        font-size: min(3.5vw, 7vh);
+        line-height: min(3.5vw, 7vh);
     }
 
     #uvod .row .obrazek {
