@@ -25,7 +25,7 @@
 }
 
 body {
-    background-color: var(--main-dark-color);
+    background-color: var(--main-light-color);
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
 }
@@ -36,7 +36,7 @@ html {
 }
 
 .fullscreen {
-    min-height: calc(100dvh - clamp(2rem, calc(6vw + 0.2rem), 8rem));
+    min-height: calc(100vh - clamp(2rem, calc(6vw + 0.2rem), 8rem));
 }
 
 .anchor {
@@ -110,6 +110,7 @@ section {
 #banner {
     overflow: hidden;
     scroll-snap-align: start;
+    min-height: calc(100svh - clamp(2rem, calc(6vw + 0.2rem), 8rem));
 }
 
 #banner_bgr {
@@ -304,7 +305,7 @@ section {
 #sec-o-akci svg {
     position: absolute;
     top: calc(1 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
-    left: calc(1 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
+    left: calc(0.9 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
     height: calc(3 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
 }
 
@@ -349,7 +350,7 @@ section {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 1rem;
-        text-indent: calc(4.3 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
+        text-indent: calc(3.9 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
     }
 }
 
