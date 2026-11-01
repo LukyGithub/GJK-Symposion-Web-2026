@@ -448,7 +448,8 @@ section {
 
 
 #credits {
-    height: 3rem;
+    height: auto;
+    padding: 0.3rem 0.5rem 1rem 0.5rem;
     background-color: var(--main-dark-color);
     color: var(--light-text-color);
 }
