@@ -181,21 +181,82 @@ section {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 25vh;
     overflow-x: hidden;
     overflow-y: visible;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#uvod .row p {
-    font-size: 6rem;
-    line-height: 6rem;
+.uvod_landscape {
+    display: none;
 }
 
-#uvod .row img {
-    height: 12rem;
+@media (orientation: landscape) {
+    .uvod_landscape {
+        display: initial;
+    }
+
+    .uvod_portrait {
+        display: none;
+    }
+
+    #uvod .row {
+        height: 20vh;
+        width: 80vw;
+    }
+
+    #uvod .row p {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+    }
+
+    #uvod .row .obrazek {
+        height: 7vw;
+        margin: 0 2rem;
+    }
+}
+
+@media (orientation: portrait) {
+    #uvod .row {
+        height: calc((100vh - clamp(2rem, calc(6vw + 0.2rem), 8rem)) / 8);
+        width: 80vw;
+        gap: 2rem;
+    }
+
+    #uvod .row p {
+        font-size: 5vw;
+        line-height: 3vw;
+    }
+
+    #uvod .row .obrazek {
+        height: 11vw;
+        margin: 0;
+    }
+}
+
+
+#uvod .row .obrazek {
     width: auto;
+    flex-grow: 1;
     transform: translateY(-10px);
-    margin: 0 2rem;
+    background-size: cover;
+
+}
+
+.sklo1 {
+    background-image: url("media/sklo_1.png");
+}
+
+.sklo2 {
+    background-image: url("media/sklo_2.png");
+}
+
+.sklo3 {
+    background-image: url("media/sklo_3.png");
+}
+
+.sklo4 {
+    background-image: url("media/sklo_4.png");
 }
 
 #uvod .full {
