@@ -36,7 +36,7 @@ html {
 }
 
 .fullscreen {
-    min-height: calc(100vh - clamp(2rem, calc(6vw + 0.2rem), 8rem));
+    min-height: calc(100dvh - clamp(2rem, calc(6vw + 0.2rem), 8rem));
 }
 
 .anchor {
