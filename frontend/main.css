@@ -31,20 +31,15 @@ body {
 }
 
 html {
+    --navbar-height: clamp(2rem, calc(6vw + 0.2rem), 8rem);
+
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
+    scroll-padding: var(--navbar-height) 0 0;
 }
 
 .fullscreen {
     min-height: calc(100vh - clamp(2rem, calc(6vw + 0.2rem), 8rem));
-}
-
-.anchor {
-    display: block;
-    position: absolute;
-    top: calc(-1 * clamp(2rem, calc(6vw + 0.2rem), 8rem));
-    visibility: hidden;
-    scroll-snap-align: start;
 }
 
 p {
@@ -105,6 +100,7 @@ nav #links a {
 
 section {
     position: relative;
+    scroll-snap-align: start;
 }
 
 #banner {
@@ -170,17 +166,17 @@ section {
     }
 }
 
-#sec-uvod {
+#uvod {
     color: var(--light-text-color);
     padding-left: 1rem;
     padding-top: 4rem;
 }
 
-#sec-uvod canvas {
+#uvod canvas {
     background-color: var(--main-dark-color);
 }
 
-#sec-uvod .row {
+#uvod .row {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -190,27 +186,27 @@ section {
     overflow-y: visible;
 }
 
-#sec-uvod .row p {
+#uvod .row p {
     font-size: 6rem;
     line-height: 6rem;
 }
 
-#sec-uvod .row img {
+#uvod .row img {
     height: 12rem;
     width: auto;
     transform: translateY(-10px);
     margin: 0 2rem;
 }
 
-#sec-uvod .full {
+#uvod .full {
     font-family: Horizon;
 }
 
-#sec-uvod .empty {
+#uvod .empty {
     font-family: Horizon Outlined;
 }
 
-#sec-harmonogram {
+#harmonogram {
     background-color: rgba(7, 36, 22, 0.8);
     color: var(--light-text-color);
     height: 50vh;
@@ -218,26 +214,26 @@ section {
     background-blend-mode: multiply;
 }
 
-#sec-harmonogram h1 {
+#harmonogram h1 {
     margin-top: min(4rem, 8vh);
     margin-bottom: min(3rem, 2vh);
 }
 
-#sec-kontakty {
+#kontakty {
     color: var(--dark-text-color);
 }
 
-#sec-kontakty p {
+#kontakty p {
     display: flex;
     align-items: flex-start;
     justify-content: left;
 }
 
-#sec-kontakty canvas {
+#kontakty canvas {
     background-color: var(--main-light-color);
 }
 
-#sec-kontakty h1 {
+#kontakty h1 {
     font-family: Horizon;
     margin-top: min(4rem, 8vh);
     margin-bottom: min(3rem, 2vh);
@@ -245,12 +241,12 @@ section {
     font-size: calc(clamp(1.5rem, 2.4vw + 1.5rem, 5.6rem));
 }
 
-#sec-kontakty h2 {
+#kontakty h2 {
     margin-top: 2rem;
 
 }
 
-#sec-kontakty .socials {
+#kontakty .socials {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -258,7 +254,7 @@ section {
     gap: 2rem;
 }
 
-#sec-kontakty .socials img {
+#kontakty .socials img {
     width: min(10vh, 15vw);
 }
 
@@ -290,19 +286,19 @@ section {
     border: none;
 }
 
-#sec-o-akci {
+#o-akci {
     color: var(--dark-text-color);
 }
 
-#sec-o-akci canvas {
+#o-akci canvas {
     background-color: var(--main-light-color);
 }
 
-#sec-o-akci svg path {
+#o-akci svg path {
     fill: var(--dark-text-color);
 }
 
-#sec-o-akci svg {
+#o-akci svg {
     position: absolute;
     top: calc(1 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
     left: calc(0.9 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
@@ -337,14 +333,14 @@ section {
         top: 1rem;
     }
 
-    #sec-harmonogram h1,
-    #sec-harmonogram p {
+    #harmonogram h1,
+    #harmonogram p {
         margin-top: 0;
         padding-top: 2rem;
         margin-left: 5vw;
     }
 
-    #sec-o-akci h1 {
+    #o-akci h1 {
         padding-top: calc(2.9 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
         width: 90vw;
         margin-left: auto;
@@ -359,9 +355,9 @@ section {
         flex-direction: row !important;
     }
 
-    #sec-o-akci,
-    #sec-kontakty,
-    #sec-harmonogram {
+    #o-akci,
+    #kontakty,
+    #harmonogram {
         padding: 1rem 2rem 1rem min(10rem, 10vw);
     }
 
@@ -370,7 +366,7 @@ section {
         padding: 0 2rem;
     }
 
-    #sec-o-akci h1 {
+    #o-akci h1 {
         margin-top: calc(2.4 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
         margin-bottom: 2rem;
         text-indent: calc(1.8 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
@@ -384,7 +380,7 @@ section {
         max-width: 50vw;
     }
 
-    #sec-kontakty p {
+    #kontakty p {
         padding-right: 3rem;
     }
 }
