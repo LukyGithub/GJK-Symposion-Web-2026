@@ -378,6 +378,8 @@ section {
     text-align: center;
     width: 85vw;
     padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (max-width: 999px) {
