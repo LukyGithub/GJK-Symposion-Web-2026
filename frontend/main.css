@@ -271,7 +271,6 @@ section {
 #harmonogram {
     background-color: rgba(7, 36, 22, 0.8);
     color: var(--light-text-color);
-    height: 50vh;
     background-image: url("media/harmonogram_bgr.webp");
     background-blend-mode: multiply;
 }

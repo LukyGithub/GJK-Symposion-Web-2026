@@ -95,4 +95,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   animate2();
+  fill_harmonogram();
 });

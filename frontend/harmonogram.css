@@ -1,0 +1,133 @@
+#harmonogram_days {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.lunch_row,
+.lunch_row td {
+  height: auto !important;
+  padding-bottom: 0.7rem !important;
+}
+
+
+#harmonogram_days h3 {
+  font-size: clamp(1.2rem, 1.5vw + 0.5rem, 2.5rem);
+  margin-bottom: 0.5em;
+}
+
+.day_table {
+  z-index: 2;
+}
+
+#harmonogram_days table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#harmonogram_days th,
+#harmonogram_days td {
+  text-align: center;
+  vertical-align: top;
+  width: calc((100% - 4em) / 6);
+}
+
+@media screen and (min-width: 901px) {
+  #harmonogram_days td:not(:nth-child(1)) {
+    height: 10rem;
+    padding: 0.5rem;
+  }
+
+  #harmonogram_days td:nth-child(1) {
+    padding-top: 0.5rem;
+  }
+
+  #harmonogram_days tr:not(:last-child) {
+    border-bottom: dashed 2px var(--light-text-color);
+  }
+
+  #harmonogram_days th:not(:nth-child(1)),
+  #harmonogram_days td:not(:nth-child(1)) {
+    border-right: dashed 2px var(--light-text-color);
+    border-left: dashed 2px var(--light-text-color);
+  }
+
+  #harmonogram_days th:last-child,
+  #harmonogram_days td:last-child {
+    border-right: none;
+  }
+}
+
+#harmonogram_days p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#harmonogram_days .presenter {
+  font-weight: 600;
+  font-size: min(1.1rem, 5vw);
+}
+
+#harmonogram_days .lecture {
+  font-size: min(1rem, 4vw);
+}
+
+#harmonogram_days th {
+  font-size: x-large;
+}
+
+#harmonogram_days th:nth-child(1),
+#harmonogram_days td:nth-child(1) {
+  font-size: x-large;
+  width: 4em;
+}
+
+@media screen and (max-width: 900px) {
+  #harmonogram_days tr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #harmonogram_days td:nth-child(1) {
+    border-bottom: 2px solid var(--light-text-color);
+    margin-top: 2rem;
+    font-size: min(large, 7vw);
+  }
+
+  #harmonogram_days tr:nth-child(2) td:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  #harmonogram_days td {
+    width: 100%;
+  }
+
+  #harmonogram_days table tr:first-child {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #harmonogram_days .lecture {
+    font-size: calc(clamp(0.8rem, 0.5vw + 0.4rem, 1rem));
+  }
+
+  #harmonogram_days .presenter {
+    font-size: calc(clamp(0.9rem, 0.55vw + 0.44rem, 1rem));
+  }
+
+  #harmonogram_days th,
+  #harmonogram_days th:nth-child(1),
+  #harmonogram_days td:nth-child(1) {
+    font-size: clamp(1.1rem, 1.2vw + 0.3rem, 1.7rem);
+  }
+
+}
