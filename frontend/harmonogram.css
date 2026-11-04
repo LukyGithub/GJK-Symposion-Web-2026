@@ -12,20 +12,10 @@
   padding-bottom: 0.7rem !important;
 }
 
-
-#harmonogram_days h3 {
-  font-size: clamp(2.4rem, 3vw + 1rem, 5rem);
-  font-family: Horizon;
-  display: block;
-  height: 3rem;
-  width: calc(2*clamp(2.4rem, 3vw + 1rem, 5rem));
-  transform: rotateZ(270deg) translateX(-100%);
-  transform-origin: left top;
-}
-
 .day_table {
   z-index: 2;
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding-bottom: 6rem;
 }
@@ -43,7 +33,16 @@
   width: calc((100% - 4em) / 6);
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 1001px) {
+  #harmonogram_days h3 {
+    font-size: clamp(2.4rem, 3vw + 1rem, 5rem);
+    font-family: Horizon;
+    display: block;
+    height: 3rem;
+    width: calc(2 * clamp(2.4rem, 3vw + 1rem, 5rem));
+    transform: rotateZ(270deg) translateX(-100%);
+    transform-origin: left top;
+  }
   #harmonogram_days td:not(:nth-child(1)) {
     height: 10rem;
     padding: 0.5rem;
@@ -94,7 +93,17 @@
   width: 4em;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+  .day_table {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #harmonogram_days h3 {
+    font-size: min(3rem, 8vw);
+    font-family: Horizon;
+  }
+
   #harmonogram_days tr {
     display: flex;
     flex-direction: column;
@@ -140,5 +149,4 @@
   #harmonogram_days td:nth-child(1) {
     font-size: clamp(1.1rem, 1.2vw + 0.3rem, 1.7rem);
   }
-
 }

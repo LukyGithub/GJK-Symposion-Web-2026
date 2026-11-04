@@ -397,13 +397,6 @@ section {
         top: 1rem;
     }
 
-    #harmonogram h1,
-    #harmonogram p {
-        margin-top: 0;
-        padding-top: 2rem;
-        margin-left: 5vw;
-    }
-
     #o-akci h1 {
         padding-top: calc(2.9 * clamp(1.3rem, 1.5vw + 1.2rem, 4rem));
         width: 90vw;
