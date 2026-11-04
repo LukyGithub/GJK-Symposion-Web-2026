@@ -1,4 +1,6 @@
 #harmonogram_days {
+  width: 80vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -12,12 +14,20 @@
 
 
 #harmonogram_days h3 {
-  font-size: clamp(1.2rem, 1.5vw + 0.5rem, 2.5rem);
-  margin-bottom: 0.5em;
+  font-size: clamp(2.4rem, 3vw + 1rem, 5rem);
+  font-family: Horizon;
+  display: block;
+  height: 3rem;
+  width: calc(2*clamp(2.4rem, 3vw + 1rem, 5rem));
+  transform: rotateZ(270deg) translateX(-100%);
+  transform-origin: left top;
 }
 
 .day_table {
   z-index: 2;
+  display: flex;
+  align-items: center;
+  padding-bottom: 6rem;
 }
 
 #harmonogram_days table {
@@ -44,13 +54,13 @@
   }
 
   #harmonogram_days tr:not(:last-child) {
-    border-bottom: dashed 2px var(--light-text-color);
+    border-bottom: solid 4px var(--light-text-color);
   }
 
   #harmonogram_days th:not(:nth-child(1)),
   #harmonogram_days td:not(:nth-child(1)) {
-    border-right: dashed 2px var(--light-text-color);
-    border-left: dashed 2px var(--light-text-color);
+    border-right: solid 4px var(--light-text-color);
+    border-left: solid 4px var(--light-text-color);
   }
 
   #harmonogram_days th:last-child,
@@ -65,11 +75,12 @@
 }
 
 #harmonogram_days .presenter {
-  font-weight: 600;
+  font-weight: 700;
   font-size: min(1.1rem, 5vw);
 }
 
 #harmonogram_days .lecture {
+  font-weight: 600;
   font-size: min(1rem, 4vw);
 }
 

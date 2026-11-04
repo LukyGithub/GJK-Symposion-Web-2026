@@ -273,6 +273,7 @@ section {
     color: var(--light-text-color);
     background-image: url("media/harmonogram_bgr.webp");
     background-blend-mode: multiply;
+    padding-top: 6rem;
 }
 
 #harmonogram h1 {
@@ -419,8 +420,7 @@ section {
     }
 
     #o-akci,
-    #kontakty,
-    #harmonogram {
+    #kontakty {
         padding: 1rem 2rem 1rem min(10rem, 10vw);
     }
 
