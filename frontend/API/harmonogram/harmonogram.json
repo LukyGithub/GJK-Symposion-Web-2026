@@ -1,5 +1,5 @@
 {
-  "update_date": "Wed, 04 Nov 2026 09:34:08 GMT",
+  "update_date": "Wed, 04 Nov 2026 22:39:05 GMT",
   "days": [
     {
       "day": "Pondělí",
@@ -261,7 +261,7 @@
             },
             {
               "id": 31,
-              "title": "",
+              "title": "Ta druhá (2024): promítání a diskuse",
               "name": "Magdalena Marie Kochová",
               "room": "P2.3",
               "start_time": "19:00",
@@ -505,7 +505,7 @@
             {
               "id": 57,
               "title": "",
-              "name": "Jan Frait",
+              "name": "Kamila Fialová",
               "room": "P2.2",
               "start_time": "09:00",
               "end_time": "10:50"
@@ -521,7 +521,7 @@
             {
               "id": 59,
               "title": "",
-              "name": "Vít Kubant",
+              "name": "Lenka Polívková",
               "room": "Sborovna",
               "start_time": "09:00",
               "end_time": "10:50"
@@ -537,7 +537,7 @@
             {
               "id": 61,
               "title": "",
-              "name": "",
+              "name": "Vít Kubant",
               "room": "P2.3",
               "start_time": "09:00",
               "end_time": "10:50"
@@ -611,7 +611,7 @@
             {
               "id": 69,
               "title": "",
-              "name": "Karel Smejkal",
+              "name": "",
               "room": "P2.2",
               "start_time": "14:00",
               "end_time": "15:50"
@@ -627,7 +627,7 @@
             {
               "id": 71,
               "title": "",
-              "name": "",
+              "name": "Jan Frait",
               "room": "Sborovna",
               "start_time": "14:00",
               "end_time": "15:50"
@@ -664,7 +664,7 @@
             {
               "id": 75,
               "title": "",
-              "name": "Kamila Fialová",
+              "name": "Karel Smejkal",
               "room": "P2.2",
               "start_time": "16:00",
               "end_time": "17:50"

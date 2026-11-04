@@ -1,7 +1,8 @@
 async function fill_harmonogram() {
   const getData = async () => {
     const time = new Date().getTime(); // Add it to the URL to prevent caching
-    const harmonogramURL = "./API/harmonogram/harmonogram.json";
+    //const harmonogramURL = "./API/harmonogram/harmonogram.json";
+    const harmonogramURL = "https://script.google.com/macros/s/AKfycbz9cCngIjCHImvNlkVv7EbRpNjKiiEuscW5mkeKXrCBid6R-H73jzyKOXzB9BXzSVIN3g/exec?getHarmonogram";
     const url = harmonogramURL; //+ "&t=" + time;
     let data;
     try {
