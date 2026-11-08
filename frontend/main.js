@@ -3,6 +3,7 @@ const canvas_id = [
   "can_bgr_uvod",
   "can_bgr_o_akci",
   "can_bgr_kontakty",
+  "can_bgr_popup"
 ];
 
 const canvases = [];
@@ -72,7 +73,6 @@ function animate2() {
   requestAnimationFrame(animate2);
 }
 
-
 window.addEventListener("resize", () => {
   for (const { canvas } of canvases) {
     canvas.width = document.getElementById(canvas.id).clientWidth;
@@ -96,4 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animate2();
   fill_harmonogram();
+  document.querySelector("#background_darken").addEventListener("click", () => {
+    closePopup();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closePopup();
+    }
+  });
 });

@@ -265,7 +265,9 @@
         </p>
       </section>
 
+      <div id="background_darken"></div>
       <div id="popup">
+        <canvas id="can_bgr_popup"></canvas>
           <div id="popup_header">
             <h2 id="popup_presenter"></h2>
             <div id="popup_horizontal">
@@ -273,7 +275,7 @@
               <p id="popup_time"></p>
             </div>
           </div>
-          <div id="popup_close">
+          <div id="popup_close" onclick="closePopup()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
