@@ -214,6 +214,7 @@
 
 #popup_profile {
   margin-top: 0.5rem;
+  font-weight: 600;
 }
 
 
@@ -267,7 +268,4 @@
 
 #popup_content {
   overflow-y: scroll;
-}
-
-@media screen and (min-width: 1000px) {
 }
