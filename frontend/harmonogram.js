@@ -105,6 +105,48 @@ async function fill_harmonogram() {
   });
 }
 
+
+function showPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+async function popup(id) {
+  const getData = async () => {
+    //const url = "./API/prednasky/prednaska_" + id + ".json";
+    const url = "https://script.google.com/macros/s/AKfycbz9cCngIjCHImvNlkVv7EbRpNjKiiEuscW5mkeKXrCBid6R-H73jzyKOXzB9BXzSVIN3g/exec?getLecture";
+    let data;
+    try {
+      data = await cachedFetch("prednaska" + id, url, 180);
+    } catch {
+      console.error("error fetching data");
+      data = {
+        title: "Ukázkový název přednášky",
+        name: "Jan Novák",
+        annotation:
+          "Toto je ukázková anotace přednášky. Bude zde popsán obsah přednášky a další informace.",
+        profile:
+          "Jan Novák je zkušený přednášející s mnohaletou praxí v oboru. Specializuje se na zajímavá témata a rád sdílí své znalosti.",
+        room: "Aula",
+        start_time: "10:00",
+        end_time: "11:00",
+      };
+    }
+    return data;
+  };
+
+  const data = await getData();
+
+  document.getElementById("popup_title").textContent = data.title;
+  document.getElementById("popup_presenter").textContent = data.name;
+  document.getElementById("popup_annotation").textContent = data.annotation;
+  document.getElementById("popup_profile").textContent = data.profile;
+  document.getElementById("popup_room").textContent = data.room;
+  document.getElementById("popup_time").textContent =
+    data.start_time + " - " + data.end_time;
+
+  showPopup();
+}
+
 async function cachedFetch(name, url, refresh_time) {
   let lst = "T_" + name;
   let t = Math.floor(new Date().getTime() / 1000);
@@ -141,5 +183,6 @@ async function cachedFetch(name, url, refresh_time) {
       );
       return localStorage[name];
     }
+    throw new Error("fetch_error");
   }
 }
