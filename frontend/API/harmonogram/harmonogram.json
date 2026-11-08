@@ -1,5 +1,5 @@
 {
-  "update_date": "Wed, 04 Nov 2026 22:39:05 GMT",
+  "update_date": "Sun, 08 Nov 2026 19:28:52 GMT",
   "days": [
     {
       "day": "Pondělí",
@@ -9,7 +9,7 @@
           "lectures": [
             {
               "id": 2,
-              "title": "",
+              "title": "Křehká budoucnost afrických zvířat: příběh antilopy Derbyho",
               "name": "Tamara Fedorová",
               "room": "P1.1",
               "start_time": "10:00",
@@ -26,7 +26,7 @@
             {
               "id": 4,
               "title": "",
-              "name": "debata o médiích",
+              "name": "Neprůhledné sklo institucí",
               "room": "Aula",
               "start_time": "10:00",
               "end_time": "11:50"
@@ -78,7 +78,7 @@
             },
             {
               "id": 10,
-              "title": "",
+              "title": "Gaza za sklem",
               "name": "Yasar Abu Ghosh",
               "room": "Aula",
               "start_time": "13:00",
@@ -116,7 +116,7 @@
             {
               "id": 14,
               "title": "Lasery ELI Beamlines jako okno na hranice dnešní fyziky",
-              "name": "Martin Formánek",
+              "name": "Martin Stack Formánek",
               "room": "P1.1",
               "start_time": "15:00",
               "end_time": "16:50"
@@ -168,7 +168,7 @@
           "lectures": [
             {
               "id": 20,
-              "title": "",
+              "title": "Prostor pro život: co znamená welfare zvířat?",
               "name": "Helena Chaloupková",
               "room": "P1.1",
               "start_time": "17:00",
@@ -192,15 +192,15 @@
             },
             {
               "id": 23,
-              "title": "",
-              "name": "debata o kulturní politice",
+              "title": "Zrcadlení politiky v kultuře – kde končí hranice kontroly a začíná cenzura?",
+              "name": "Debata o kulturní politice",
               "room": "Sborovna",
               "start_time": "17:00",
               "end_time": "18:50"
             },
             {
               "id": 24,
-              "title": "",
+              "title": "Letový plán do vysněné destinace aneb Jak najít svou unikátní profesní cestu",
               "name": "Yvona Tošnerová ",
               "room": "USV",
               "start_time": "17:00",
@@ -279,7 +279,7 @@
           "lectures": [
             {
               "id": 32,
-              "title": "",
+              "title": "Jak proměnit vodu ve sklo?",
               "name": "Tomáš Ovad",
               "room": "P1.1",
               "start_time": "09:00",
@@ -295,8 +295,8 @@
             },
             {
               "id": 34,
-              "title": "",
-              "name": "debata Amerika",
+              "title": "Tříštění tradičního západu - mění USA své priority?",
+              "name": "Debata Amerika",
               "room": "Aula",
               "start_time": "09:00",
               "end_time": "10:50"
@@ -348,7 +348,7 @@
             },
             {
               "id": 40,
-              "title": "",
+              "title": "KŘEHKOST ROVNOVÁHY, DŮVĚRY A VZÁJEMNÉ SPOLUPRÁCEZákladní principy párové akrobacie v praxi",
               "name": "Veronika Smolková ",
               "room": "Aula",
               "start_time": "11:00",
@@ -364,7 +364,7 @@
             },
             {
               "id": 42,
-              "title": "",
+              "title": "Příroda objektivem kamery: Může film myslet ekologicky?",
               "name": "Jáchym Šidlák",
               "room": "USV",
               "start_time": "11:00",
@@ -385,8 +385,8 @@
           "lectures": [
             {
               "id": 44,
-              "title": "",
-              "name": "Jan Andresek",
+              "title": "Dějiny ochrany přírody na území České republiky (s přihlédnutím k dějinám sklářství).",
+              "name": "Jan Andreska",
               "room": "P1.1",
               "start_time": "14:00",
               "end_time": "15:50"
@@ -410,7 +410,7 @@
             {
               "id": 47,
               "title": "",
-              "name": "",
+              "name": "Petr Zahradník a Oldřich Palata",
               "room": "Sborovna",
               "start_time": "14:00",
               "end_time": "15:50"
@@ -425,7 +425,7 @@
             },
             {
               "id": 49,
-              "title": "",
+              "title": "Sudety jako zrcadlo české společnosti v průběhu času",
               "name": "Ondřej Matějka",
               "room": "P2.3",
               "start_time": "14:00",
@@ -504,7 +504,7 @@
             },
             {
               "id": 57,
-              "title": "",
+              "title": "Za sklem prosperity: chudoba, nerovnosti a životní úroveň v Česku",
               "name": "Kamila Fialová",
               "room": "P2.2",
               "start_time": "09:00",
@@ -520,7 +520,7 @@
             },
             {
               "id": 59,
-              "title": "",
+              "title": "Skleník bez skla: Co zahřívá naši planetu?",
               "name": "Lenka Polívková",
               "room": "Sborovna",
               "start_time": "09:00",
@@ -565,15 +565,15 @@
             },
             {
               "id": 64,
-              "title": "",
-              "name": "debata polarizace",
+              "title": "Společnost za sklem: Proč se Evropa polarizuje?",
+              "name": "Debata polarizace",
               "room": "Aula",
               "start_time": "11:00",
               "end_time": "12:50"
             },
             {
               "id": 65,
-              "title": "",
+              "title": "Vokno jakožto výhled ze tmy do světla:Samizdat a Undergroundová kultura v kleci totalit\r\n",
               "name": "František ,,Čuňas\" Stárek",
               "room": "Sborovna",
               "start_time": "11:00",
@@ -611,7 +611,7 @@
             {
               "id": 69,
               "title": "",
-              "name": "",
+              "name": "Robert Šámal",
               "room": "P2.2",
               "start_time": "14:00",
               "end_time": "15:50"
@@ -626,7 +626,7 @@
             },
             {
               "id": 71,
-              "title": "",
+              "title": "Křehká důvěra: Jak funguje moderní bankovní systém",
               "name": "Jan Frait",
               "room": "Sborovna",
               "start_time": "14:00",
