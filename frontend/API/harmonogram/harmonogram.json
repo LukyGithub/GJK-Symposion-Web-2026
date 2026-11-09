@@ -1,5 +1,5 @@
 {
-  "update_date": "Sun, 08 Nov 2026 19:28:52 GMT",
+  "update_date": "Mon, 09 Nov 2026 05:35:02 GMT",
   "days": [
     {
       "day": "Pondělí",
@@ -25,8 +25,8 @@
             },
             {
               "id": 4,
-              "title": "",
-              "name": "Neprůhledné sklo institucí",
+              "title": "Právo vidět skrz",
+              "name": "Právo vidět skrz",
               "room": "Aula",
               "start_time": "10:00",
               "end_time": "11:50"
@@ -192,8 +192,8 @@
             },
             {
               "id": 23,
-              "title": "Zrcadlení politiky v kultuře – kde končí hranice kontroly a začíná cenzura?",
-              "name": "Debata o kulturní politice",
+              "title": "Debata",
+              "name": "Zrcadlení politiky v kultuře – kde končí hranice kontroly a začíná cenzura?",
               "room": "Sborovna",
               "start_time": "17:00",
               "end_time": "18:50"
@@ -295,8 +295,8 @@
             },
             {
               "id": 34,
-              "title": "Tříštění tradičního západu - mění USA své priority?",
-              "name": "Debata Amerika",
+              "title": "Debata",
+              "name": "Tříštění tradičního západu - mění USA své priority?",
               "room": "Aula",
               "start_time": "09:00",
               "end_time": "10:50"
@@ -348,7 +348,7 @@
             },
             {
               "id": 40,
-              "title": "KŘEHKOST ROVNOVÁHY, DŮVĚRY A VZÁJEMNÉ SPOLUPRÁCEZákladní principy párové akrobacie v praxi",
+              "title": "Křehkost rovnováhy, důvěry a vzájemné spolupráce - Základní principy párové akrobacie v praxi",
               "name": "Veronika Smolková ",
               "room": "Aula",
               "start_time": "11:00",
@@ -438,7 +438,7 @@
           "lectures": [
             {
               "id": 50,
-              "title": "",
+              "title": "Čeština v zrcadle času",
               "name": "Martin Mareš",
               "room": "P1.1",
               "start_time": "16:00",
@@ -565,8 +565,8 @@
             },
             {
               "id": 64,
-              "title": "Společnost za sklem: Proč se Evropa polarizuje?",
-              "name": "Debata polarizace",
+              "title": "Debata",
+              "name": "Společnost za sklem: Proč se Evropa polarizuje?",
               "room": "Aula",
               "start_time": "11:00",
               "end_time": "12:50"
