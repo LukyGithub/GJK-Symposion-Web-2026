@@ -12,6 +12,7 @@
     /*--light-text-color: #7e8d85;*/
     --light-text-color: rgba(246, 255, 243, 0.6);
     --dark-text-color: rgba(4, 17, 11, 0.8);
+    --light-harmonogram-text-color: rgba(246, 255, 243, 0.8);
 }
 
 @font-face {
@@ -270,7 +271,7 @@ section {
 
 #harmonogram {
     background-color: rgba(7, 36, 22, 0.8);
-    color: var(--light-text-color);
+    color: var(--light-harmonogram-text-color);
     background-image: url("media/harmonogram_bgr.webp");
     padding-top: 6rem;
 }
