@@ -70,7 +70,15 @@ function animate2() {
   for (const { canvas, ctx, color, width } of canvases) {
     drawLines(canvas, ctx, color, width);
   }
-  requestAnimationFrame(animate2);
+  //requestAnimationFrame(animate2);
+}
+
+function reset_popup() {
+  for (const { canvas } of canvases) {
+    canvas.width = document.getElementById(canvas.id).clientWidth;
+    canvas.height = document.getElementById(canvas.id).clientHeight;
+  }
+  animate2();
 }
 
 window.addEventListener("resize", () => {

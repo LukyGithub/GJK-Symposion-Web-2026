@@ -110,6 +110,7 @@ async function fill_harmonogram() {
 function showPopup() {
   document.getElementById("popup").style.display = "block";
   document.getElementById("background_darken").style.display = "block";
+  reset_popup();
 }
 
 function closePopup() {
