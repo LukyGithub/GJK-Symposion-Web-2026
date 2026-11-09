@@ -86,6 +86,7 @@ window.addEventListener("resize", () => {
     canvas.width = document.getElementById(canvas.id).clientWidth;
     canvas.height = document.getElementById(canvas.id).clientHeight;
   }
+  animate2();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
