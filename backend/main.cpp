@@ -15,7 +15,7 @@ using namespace std;
 class Lecture
 {
     public:
-    static enum Rooms
+    enum Rooms
     {
         P11,
         P22,
@@ -26,7 +26,7 @@ class Lecture
         NONE
     };
 
-    static enum Day
+    enum Day
     {
         Monday,
         Tuesday,
