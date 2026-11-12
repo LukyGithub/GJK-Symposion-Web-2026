@@ -18,6 +18,7 @@ class Lecture
     enum Rooms
     {
         P11,
+        P12,
         P22,
         AULA,
         SBOROVNA,
@@ -52,6 +53,7 @@ class Lecture
 
     const map<Rooms, string> room_names = {
         {P11, "P1.1"},
+        {P12, "P1.2"},
         {P22, "P2.2"},
         {AULA, "Aula"},
         {SBOROVNA, "Sborovna"},
@@ -99,7 +101,7 @@ class Lecture
         return json;
     }
 
-    crow::json::wvalue Jsonify()
+    crow::json::wvalue jsonify()
     {
         crow::json::wvalue json = {
             {"id", _id},
@@ -120,8 +122,10 @@ class Lecture
 class Harmonogram
 {
     bool is_ready = false;
+    time_t last_fetch_time;
 
-    string URL = "https://docs.google.com/spreadsheets/d/1JpmNZXqIA_AQWs6JQbDYk9MqxdLqfUBAFA9d9XpK8ek/export?format=csv";
+    const u_int TTL = 900; // Time to live in seconds; 900 = 30 min
+    const string URL = "https://docs.google.com/spreadsheets/d/1JpmNZXqIA_AQWs6JQbDYk9MqxdLqfUBAFA9d9XpK8ek/export?format=csv";
     map<u_int, vector<string>> day_block_times {
         {0, {"10:00", "13:00", "15:00", "17:00", "19:00"}},
         {1, {"09:00", "11:00", "14:00", "16:00"}},
@@ -139,6 +143,7 @@ class Harmonogram
 
     const map<string, Lecture::Rooms> rooms = {
         {"P1.1", Lecture::Rooms::P11},
+        {"P1.2", Lecture::Rooms::P12},
         {"P2.2", Lecture::Rooms::P22, },
         {"Aula", Lecture::Rooms::AULA},
         {"Sborovna", Lecture::Rooms::SBOROVNA},
@@ -160,6 +165,8 @@ class Harmonogram
 
     void fetch_data()
     {
+        cout << "Fetching Harmonogram..." << endl;
+
         cpr::Response r = cpr::Get(cpr::Url{URL});
 
         csv::CSVReader reader = csv::parse(r.text);
@@ -236,10 +243,12 @@ class Harmonogram
     {
         crow::json::wvalue harmonogram;
 
-        istringstream time_stream("Thu, 1 Jan 1970 00:00:00");
+        ostringstream time_stream("Thu, 1 Jan 1970 00:00:00");
 
-        tm time;
-        time_stream >> get_time(&time, "%a, %d %b %Y %H:%M:%S");
+        time_t t = std::time(nullptr);
+        last_fetch_time = t;
+        tm time = *localtime(&t);
+        time_stream << put_time(&time, "%a, %d %b %Y %H:%M:%S");
 
         crow::json::wvalue::list days;
 
@@ -289,6 +298,7 @@ class Harmonogram
 
     crow::json::wvalue get_details(int id)
     {
+        compare_and_refetch();
         Lecture& suspected_lecture = lectures[id];
         if (suspected_lecture.get_id() == id) // Assumes they are sorted
         {
@@ -306,7 +316,18 @@ class Harmonogram
 
     crow::json::wvalue get_harmonogram()
     {
+        compare_and_refetch();
         return harmonogram;
+    }
+
+    private:
+    void compare_and_refetch()
+    {
+        time_t t = std::time(nullptr);
+        if (last_fetch_time + TTL < t)
+        {
+            fetch_data();
+        }
     }
 };
 
@@ -321,10 +342,6 @@ int main()
         .origin("*");
 
     Harmonogram h = Harmonogram();
-
-    CROW_ROUTE(app, "/")([&h](){
-        return "Hello world";
-    });
 
     CROW_ROUTE(app, "/API/harmonogram")([&h](){
         try
